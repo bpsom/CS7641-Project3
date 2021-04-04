@@ -1,0 +1,1774 @@
+--- Unsupervised Learning ---
+
+
+
+Results for Data set =w i n e - Q
+Wine-Q data   fixed acidity  volatile acidity  citric acid  ...  sulphates  alcohol  quality
+0            7.0              0.27         0.36  ...       0.45      8.8        6
+1            6.3              0.30         0.34  ...       0.49      9.5        6
+2            8.1              0.28         0.40  ...       0.44     10.1        6
+3            7.2              0.23         0.32  ...       0.40      9.9        6
+4            7.2              0.23         0.32  ...       0.40      9.9        6
+
+[5 rows x 12 columns]
+
+K-means Clustering for wine-Q-
+Training Data Metrics -kmeans-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.09169 0.06513 0.07616 0.03816 0.07241 0.12766
+Validation Data Metrics -kmeans-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.08377 0.05746 0.06816 0.02813 0.06332 0.12030
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 1 1 0 1 1 4 0 0]
+[16  0  8  9  5 23  9  0  0]
+[115  15 130  58  27  92 135   0   0]
+[182  23 161 163 175  56 151   0   0]
+[ 65   1  40  86 133   8  17   0   0]
+[ 5  1  2 10 29  1  1  0  0]
+
+
+Expectation-Maximization Clustering for wine-Q-
+Training Data Metrics -EM-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.09684 0.07343 0.08353 0.04807 0.07972 0.01967
+Validation Data Metrics -EM-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.08391 0.06196 0.07128 0.03321 0.06630 0.02516
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[1 2 0 1 1 3 0 0 0]
+[21 11  5 19  0 14  0  0  0]
+[ 64  90  10 155  30 215   8   0   0]
+[ 92 231 133 238  31 169  17   0   0]
+[ 15  78 127  97   1  32   0   0   0]
+[ 3  5 24 13  1  2  1  0  0]
+
+
+K-means Clustering for wine-Q-PCA
+Training Data Metrics -kmeans-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.06320 0.04945 0.05549 0.03214 0.05212 0.16033
+Validation Data Metrics -kmeans-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.04498 0.03483 0.03926 0.02040 0.03500 0.11928
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[3 1 2 0 2 0 0 0 0]
+[12 20 10  0 15 13  0  0  0]
+[187  55  79   3 147 101   0   0   0]
+[193 184 173   3 165 193   0   0   0]
+[ 37 122  96   0  38  57   0   0   0]
+[ 2 21 18  0  2  6  0  0  0]
+
+
+Expectation-Maximization Clustering for wine-Q-PCA
+Training Data Metrics -EM-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.08272 0.06446 0.07245 0.05098 0.06913 0.06857
+Validation Data Metrics -EM-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.04549 0.03290 0.03818 0.02047 0.03386 0.00174
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 1 0 2 3 2 0 0 0]
+[ 1 12 10 12 20 15  0  0  0]
+[ 22 111  66 212  64  97   0   0   0]
+[113 167 167 209  73 182   0   0   0]
+[ 56  47 115  48  20  64   0   0   0]
+[ 6  7 22  3  6  5  0  0  0]
+
+
+Neural Networks
+Neural Networks - Classification ReportPCA
+
+
+Train Data Prediction Accuracy PCA %: 54.32266848196051
+Test Data Validation Accuracy PCA %: 45.05102040816327
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  1 28 33  7  1]
+[  0   3 289 252  28   0]
+[  0   0 272 516 122   1]
+[  0   0  55 218  77   0]
+[ 0  0  6 30 13  0]
+Plot ./result/wine-Q/\20-wine-Q-PCA-LearningCurve.png Created
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.25      0.01      0.03        70
+           5       0.44      0.51      0.47       572
+           6       0.49      0.57      0.53       911
+           7       0.31      0.22      0.26       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.45      1960
+   macro avg       0.25      0.22      0.21      1960
+weighted avg       0.42      0.45      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0712487515212097
+number of iterations the solver: 864
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 54.66303607896529
+Test Data Validation Accuracy PCA %: 45.20408163265306
+Test Data Confusion Matrix PCA : 
+[0 1 4 2 1 0]
+[ 0  0 30 36  4  0]
+[  0   5 271 272  24   0]
+[  0   9 258 519 125   0]
+[  0   0  51 203  96   0]
+[ 0  0  7 22 20  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.44      0.47      0.45       572
+           6       0.49      0.57      0.53       911
+           7       0.36      0.27      0.31       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.45      1960
+   macro avg       0.21      0.22      0.22      1960
+weighted avg       0.42      0.45      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.080167313583612
+number of iterations the solver: 598
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 55.003403675970056
+Test Data Validation Accuracy PCA %: 44.43877551020408
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  1 26 37  6  0]
+[  0   1 278 268  25   0]
+[  0   0 280 501 130   0]
+[  0   1  55 203  91   0]
+[ 0  1  5 25 18  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.25      0.01      0.03        70
+           5       0.43      0.49      0.46       572
+           6       0.48      0.55      0.51       911
+           7       0.34      0.26      0.29       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.44      1960
+   macro avg       0.25      0.22      0.22      1960
+weighted avg       0.42      0.44      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0747184664242686
+number of iterations the solver: 948
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 54.254594962559565
+Test Data Validation Accuracy PCA %: 44.94897959183673
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  1 29 32  8  0]
+[  0   0 279 273  20   0]
+[  0   1 275 517 118   0]
+[  0   1  53 212  84   0]
+[ 0  1  6 25 17  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.25      0.01      0.03        70
+           5       0.43      0.49      0.46       572
+           6       0.49      0.57      0.52       911
+           7       0.34      0.24      0.28       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.45      1960
+   macro avg       0.25      0.22      0.22      1960
+weighted avg       0.42      0.45      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0706372870338234
+number of iterations the solver: 632
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 54.73110959836623
+Test Data Validation Accuracy PCA %: 46.326530612244895
+Test Data Confusion Matrix PCA : 
+[0 0 5 3 0 0]
+[ 0  6 26 34  4  0]
+[  0   6 308 238  20   0]
+[  0   2 272 513 124   0]
+[  0   0  47 222  81   0]
+[ 0  0  4 30 15  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.43      0.09      0.14        70
+           5       0.47      0.54      0.50       572
+           6       0.49      0.56      0.53       911
+           7       0.33      0.23      0.27       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.29      0.24      0.24      1960
+weighted avg       0.44      0.46      0.44      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0843595647808117
+number of iterations the solver: 545
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 54.152484683458134
+Test Data Validation Accuracy PCA %: 45.40816326530612
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  5 28 31  6  0]
+[  0   4 265 281  22   0]
+[  0   0 257 541 113   0]
+[  0   0  58 213  79   0]
+[ 0  0  5 29 15  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.56      0.07      0.13        70
+           5       0.43      0.46      0.45       572
+           6       0.49      0.59      0.54       911
+           7       0.33      0.23      0.27       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.45      1960
+   macro avg       0.30      0.23      0.23      1960
+weighted avg       0.43      0.45      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0745120814695392
+number of iterations the solver: 657
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 54.96936691626957
+Test Data Validation Accuracy PCA %: 45.30612244897959
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  0 34 30  6  0]
+[  0   0 295 250  27   0]
+[  0   0 278 497 136   0]
+[  0   0  57 197  96   0]
+[ 0  0  7 27 15  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.44      0.52      0.47       572
+           6       0.50      0.55      0.52       911
+           7       0.34      0.27      0.30       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.45      1960
+   macro avg       0.21      0.22      0.22      1960
+weighted avg       0.42      0.45      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0733885238201915
+number of iterations the solver: 819
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 54.118447923757664
+Test Data Validation Accuracy PCA %: 45.45918367346939
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  5 26 34  5  0]
+[  0   5 293 247  27   0]
+[  0   3 273 504 131   0]
+[  0   1  55 205  89   0]
+[ 0  2  4 26 17  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.31      0.07      0.12        70
+           5       0.45      0.51      0.48       572
+           6       0.50      0.55      0.52       911
+           7       0.33      0.25      0.29       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.45      1960
+   macro avg       0.26      0.23      0.23      1960
+weighted avg       0.43      0.45      0.44      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.08268535728229
+number of iterations the solver: 589
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy PCA %: 53.50578624914908
+Test Data Validation Accuracy PCA %: 45.61224489795918
+Test Data Confusion Matrix PCA : 
+[0 0 5 2 1 0]
+[ 0  0 32 31  7  0]
+[  0   0 283 261  28   0]
+[  0   1 254 533 123   0]
+[  0   1  49 222  78   0]
+[ 0  1  5 27 16  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.45      0.49      0.47       572
+           6       0.50      0.59      0.54       911
+           7       0.31      0.22      0.26       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.21      0.22      0.21      1960
+weighted avg       0.42      0.46      0.43      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0793651243469982
+number of iterations the solver: 611
+num of layers: 5
+Num of o/p: 7
+Plot ./result/wine-Q/22-PCA-Episodes [(1000,1500,2000)]-HiddenLayers[(10,10),(10,20),(10, 10, 10)]-tuning.png Created
+[0 0 5 2 1 0]
+[ 0  1 28 33  7  1]
+[  0   3 289 252  28   0]
+[  0   0 272 516 122   1]
+[  0   0  55 218  77   0]
+[ 0  0  6 30 13  0]
+[0 1 4 2 1 0]
+[ 0  0 30 36  4  0]
+[  0   5 271 272  24   0]
+[  0   9 258 519 125   0]
+[  0   0  51 203  96   0]
+[ 0  0  7 22 20  0]
+[0 0 5 2 1 0]
+[ 0  1 26 37  6  0]
+[  0   1 278 268  25   0]
+[  0   0 280 501 130   0]
+[  0   1  55 203  91   0]
+[ 0  1  5 25 18  0]
+[0 0 5 2 1 0]
+[ 0  1 29 32  8  0]
+[  0   0 279 273  20   0]
+[  0   1 275 517 118   0]
+[  0   1  53 212  84   0]
+[ 0  1  6 25 17  0]
+[0 0 5 3 0 0]
+[ 0  6 26 34  4  0]
+[  0   6 308 238  20   0]
+[  0   2 272 513 124   0]
+[  0   0  47 222  81   0]
+[ 0  0  4 30 15  0]
+[0 0 5 2 1 0]
+[ 0  5 28 31  6  0]
+[  0   4 265 281  22   0]
+[  0   0 257 541 113   0]
+[  0   0  58 213  79   0]
+[ 0  0  5 29 15  0]
+[0 0 5 2 1 0]
+[ 0  0 34 30  6  0]
+[  0   0 295 250  27   0]
+[  0   0 278 497 136   0]
+[  0   0  57 197  96   0]
+[ 0  0  7 27 15  0]
+[0 0 5 2 1 0]
+[ 0  5 26 34  5  0]
+[  0   5 293 247  27   0]
+[  0   3 273 504 131   0]
+[  0   1  55 205  89   0]
+[ 0  2  4 26 17  0]
+[0 0 5 2 1 0]
+[ 0  0 32 31  7  0]
+[  0   0 283 261  28   0]
+[  0   1 254 533 123   0]
+[  0   1  49 222  78   0]
+[ 0  1  5 27 16  0]
+
+ICA Kurtosis :2.3777963941024076
+
+
+K-means Clustering for wine-Q-ICA
+Training Data Metrics -kmeans-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.04716 0.03767 0.04188 0.02407 0.03844 0.16191
+Validation Data Metrics -kmeans-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.06287 0.04856 0.05480 0.03177 0.05052 0.09534
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[1 0 3 1 0 3 0 0 0]
+[17  2 11  1 11 28  0  0  0]
+[120  30 159   3  75 185   0   0   0]
+[257 134 202   4 151 163   0   0   0]
+[ 74 121  35   3  83  34   0   0   0]
+[13 23  4  2  5  2  0  0  0]
+
+
+Expectation-Maximization Clustering for wine-Q-ICA
+Training Data Metrics -EM-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.07146 0.05691 0.06336 0.03916 0.05997 0.09249
+Validation Data Metrics -EM-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.04697 0.03349 0.03911 0.02150 0.03482 0.00804
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[1 1 0 1 2 3 0 0 0]
+[18  3 10  9 21  9  0  0  0]
+[121  52  80 137 101  81   0   0   0]
+[ 99 121 183 164  96 248   0   0   0]
+[ 15  67  98  39  22 109   0   0   0]
+[ 2 12 12  2  8 13  0  0  0]
+
+
+Neural Networks
+Neural Networks - Classification ReportICA
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Plot ./result/wine-Q/\40-wine-Q-ICA-LearningCurve.png Created
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3122525117231119
+number of iterations the solver: 185
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3118468934965393
+number of iterations the solver: 151
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3100726606892081
+number of iterations the solver: 195
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3101886008063075
+number of iterations the solver: 202
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.313162106525701
+number of iterations the solver: 186
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3129553117316615
+number of iterations the solver: 132
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3105553161460666
+number of iterations the solver: 154
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3118291365231904
+number of iterations the solver: 190
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy ICA %: 43.80530973451327
+Test Data Validation Accuracy ICA %: 46.4795918367347
+Test Data Confusion Matrix ICA : 
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.00      0.00      0.00       572
+           6       0.46      1.00      0.63       911
+           7       0.00      0.00      0.00       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.08      0.17      0.11      1960
+weighted avg       0.22      0.46      0.29      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.3117098040687036
+number of iterations the solver: 184
+num of layers: 5
+Num of o/p: 7
+Plot ./result/wine-Q/42-ICA-Episodes [(1000,1500,2000)]-HiddenLayers[(10,10),(10,20),(10, 10, 10)]-tuning.png Created
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+[0 0 0 8 0 0]
+[ 0  0  0 70  0  0]
+[  0   0   0 572   0   0]
+[  0   0   0 911   0   0]
+[  0   0   0 350   0   0]
+[ 0  0  0 49  0  0]
+
+RP Kurtosis :0.7574387729141114
+
+
+K-means Clustering for wine-Q-RP
+Training Data Metrics -kmeans-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.05084 0.04040 0.04503 0.02432 0.04160 0.18224
+Validation Data Metrics -kmeans-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.01568 0.01292 0.01417 0.01202 0.00949 0.13141
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[2 1 0 2 1 2 0 0 0]
+[15 26 12  9  7  1  0  0  0]
+[229 159  83  58  37   6   0   0   0]
+[292 293 141  86  87  12   0   0   0]
+[ 72 145  52  30  47   4   0   0   0]
+[ 9 13 12  7  7  1  0  0  0]
+
+
+Expectation-Maximization Clustering for wine-Q-RP
+Training Data Metrics -EM-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.05983 0.05486 0.05724 0.02475 0.05366 0.03655
+Validation Data Metrics -EM-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.01414 0.01237 0.01320 0.00313 0.00834 -0.15536
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[1 2 2 1 0 2 0 0 0]
+[ 1 27 22  3  0 17  0  0  0]
+[ 11 236 160  26  23 116   0   0   0]
+[ 32 321 302  70  26 160   0   0   0]
+[ 18  94 157  22   8  51   0   0   0]
+[ 3  9 24  2  1 10  0  0  0]
+
+
+Neural Networks
+Neural Networks - Classification ReportRP
+
+
+Train Data Prediction Accuracy RP %: 52.21238938053098
+Test Data Validation Accuracy RP %: 37.244897959183675
+Test Data Confusion Matrix RP : 
+[0 0 2 4 2 0]
+[ 0  0 17 46  7  0]
+[  0   0 124 381  67   0]
+[  0   0 268 590  53   0]
+[  0   0 128 206  16   0]
+[ 0  0 13 31  5  0]
+Plot ./result/wine-Q/\60-wine-Q-RP-LearningCurve.png Created
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.22      0.22      0.22       572
+           6       0.47      0.65      0.54       911
+           7       0.11      0.05      0.06       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.37      1960
+   macro avg       0.13      0.15      0.14      1960
+weighted avg       0.30      0.37      0.33      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1299289075466161
+number of iterations the solver: 746
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 51.66780122532335
+Test Data Validation Accuracy RP %: 38.265306122448976
+Test Data Confusion Matrix RP : 
+[0 1 0 4 3 0]
+[ 0  0  7 52 11  0]
+[  0   1  98 383  90   0]
+[  0   4 197 630  80   0]
+[  0   1  71 256  22   0]
+[ 0  0  7 39  3  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.26      0.17      0.21       572
+           6       0.46      0.69      0.55       911
+           7       0.11      0.06      0.08       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.38      1960
+   macro avg       0.14      0.15      0.14      1960
+weighted avg       0.31      0.38      0.33      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1437209423801127
+number of iterations the solver: 725
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 51.906058543226685
+Test Data Validation Accuracy RP %: 37.95918367346939
+Test Data Confusion Matrix RP : 
+[0 1 0 7 0 0]
+[ 0  0 14 56  0  0]
+[  0   4 110 442  16   0]
+[  0   8 260 633  10   0]
+[  0   5 125 219   1   0]
+[ 0  0 13 36  0  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.21      0.19      0.20       572
+           6       0.45      0.69      0.55       911
+           7       0.04      0.00      0.01       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.38      1960
+   macro avg       0.12      0.15      0.13      1960
+weighted avg       0.28      0.38      0.32      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1338163019466934
+number of iterations the solver: 669
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 53.437712729748135
+Test Data Validation Accuracy RP %: 35.05102040816326
+Test Data Confusion Matrix RP : 
+[0 0 2 2 4 0]
+[ 0  0 17 42 11  0]
+[  0   0 121 336 115   0]
+[  0   2 292 542  75   0]
+[  0   0 141 185  24   0]
+[ 0  0 14 33  2  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.21      0.21      0.21       572
+           6       0.48      0.59      0.53       911
+           7       0.10      0.07      0.08       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.35      1960
+   macro avg       0.13      0.15      0.14      1960
+weighted avg       0.30      0.35      0.32      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1274771112377369
+number of iterations the solver: 510
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 53.471749489448605
+Test Data Validation Accuracy RP %: 33.46938775510204
+Test Data Confusion Matrix RP : 
+[0 0 1 4 3 0]
+[ 0  0 11 45 14  0]
+[  0   0  85 358 129   0]
+[  0   1 236 556 118   0]
+[  0   0 110 225  15   0]
+[ 0  0 10 37  2  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.19      0.15      0.17       572
+           6       0.45      0.61      0.52       911
+           7       0.05      0.04      0.05       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.33      1960
+   macro avg       0.12      0.13      0.12      1960
+weighted avg       0.28      0.33      0.30      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.117140080857739
+number of iterations the solver: 705
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 52.55275697753574
+Test Data Validation Accuracy RP %: 35.714285714285715
+Test Data Confusion Matrix RP : 
+[0 0 2 3 3 0]
+[ 0  1 20 37 12  0]
+[  0   3 132 328 109   0]
+[  0   3 279 550  79   0]
+[  0   1 121 211  17   0]
+[ 0  0 15 32  2  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.12      0.01      0.03        70
+           5       0.23      0.23      0.23       572
+           6       0.47      0.60      0.53       911
+           7       0.08      0.05      0.06       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.36      1960
+   macro avg       0.15      0.15      0.14      1960
+weighted avg       0.31      0.36      0.33      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1300586566141881
+number of iterations the solver: 605
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 52.11027910142955
+Test Data Validation Accuracy RP %: 31.98979591836735
+Test Data Confusion Matrix RP : 
+[0 0 2 2 4 0]
+[ 0  0 26 28 16  0]
+[  0   0 167 216 189   0]
+[  0   0 329 404 178   0]
+[  0   0 139 155  56   0]
+[ 0  0 15 25  9  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.25      0.29      0.27       572
+           6       0.49      0.44      0.46       911
+           7       0.12      0.16      0.14       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.32      1960
+   macro avg       0.14      0.15      0.15      1960
+weighted avg       0.32      0.32      0.32      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1252531480923533
+number of iterations the solver: 600
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 52.31449965963241
+Test Data Validation Accuracy RP %: 35.66326530612245
+Test Data Confusion Matrix RP : 
+[0 0 2 4 2 0]
+[ 0  0 15 44 11  0]
+[  0   0 120 368  84   0]
+[  0   0 283 564  64   0]
+[  0   0 141 194  15   0]
+[ 0  0 14 34  1  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.21      0.21      0.21       572
+           6       0.47      0.62      0.53       911
+           7       0.08      0.04      0.06       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.36      1960
+   macro avg       0.13      0.15      0.13      1960
+weighted avg       0.29      0.36      0.32      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.129224211771153
+number of iterations the solver: 653
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy RP %: 51.59972770592239
+Test Data Validation Accuracy RP %: 36.0204081632653
+Test Data Confusion Matrix RP : 
+[0 0 2 3 3 0]
+[ 0  0 28 34  8  0]
+[  0   0 189 313  70   0]
+[  0   0 365 497  49   0]
+[  0   0 164 166  20   0]
+[ 0  0 18 28  3  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.25      0.33      0.28       572
+           6       0.48      0.55      0.51       911
+           7       0.13      0.06      0.08       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.36      1960
+   macro avg       0.14      0.16      0.15      1960
+weighted avg       0.32      0.36      0.33      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1289417344313375
+number of iterations the solver: 729
+num of layers: 5
+Num of o/p: 7
+Plot ./result/wine-Q/62-RP-Episodes [(1000,1500,2000)]-HiddenLayers[(10,10),(10,20),(10, 10, 10)]-tuning.png Created
+[0 0 2 4 2 0]
+[ 0  0 17 46  7  0]
+[  0   0 124 381  67   0]
+[  0   0 268 590  53   0]
+[  0   0 128 206  16   0]
+[ 0  0 13 31  5  0]
+[0 1 0 4 3 0]
+[ 0  0  7 52 11  0]
+[  0   1  98 383  90   0]
+[  0   4 197 630  80   0]
+[  0   1  71 256  22   0]
+[ 0  0  7 39  3  0]
+[0 1 0 7 0 0]
+[ 0  0 14 56  0  0]
+[  0   4 110 442  16   0]
+[  0   8 260 633  10   0]
+[  0   5 125 219   1   0]
+[ 0  0 13 36  0  0]
+[0 0 2 2 4 0]
+[ 0  0 17 42 11  0]
+[  0   0 121 336 115   0]
+[  0   2 292 542  75   0]
+[  0   0 141 185  24   0]
+[ 0  0 14 33  2  0]
+[0 0 1 4 3 0]
+[ 0  0 11 45 14  0]
+[  0   0  85 358 129   0]
+[  0   1 236 556 118   0]
+[  0   0 110 225  15   0]
+[ 0  0 10 37  2  0]
+[0 0 2 3 3 0]
+[ 0  1 20 37 12  0]
+[  0   3 132 328 109   0]
+[  0   3 279 550  79   0]
+[  0   1 121 211  17   0]
+[ 0  0 15 32  2  0]
+[0 0 2 2 4 0]
+[ 0  0 26 28 16  0]
+[  0   0 167 216 189   0]
+[  0   0 329 404 178   0]
+[  0   0 139 155  56   0]
+[ 0  0 15 25  9  0]
+[0 0 2 4 2 0]
+[ 0  0 15 44 11  0]
+[  0   0 120 368  84   0]
+[  0   0 283 564  64   0]
+[  0   0 141 194  15   0]
+[ 0  0 14 34  1  0]
+[0 0 2 3 3 0]
+[ 0  0 28 34  8  0]
+[  0   0 189 313  70   0]
+[  0   0 365 497  49   0]
+[  0   0 164 166  20   0]
+[ 0  0 18 28  3  0]
+
+
+K-means Clustering for wine-Q-FA
+Training Data Metrics -kmeans-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.10626 0.07916 0.09073 0.04553 0.08751 0.17248
+Validation Data Metrics -kmeans-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.09046 0.06522 0.07579 0.03858 0.07165 0.13320
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[2 2 2 1 0 1 0 0 0]
+[25 10  6  8  5 16  0  0  0]
+[ 89 152 159  31  68  73   0   0   0]
+[ 41 168 201 219 156 126   0   0   0]
+[  5  43  33 168  56  45   0   0   0]
+[ 0  3  2 33  6  5  0  0  0]
+
+
+Expectation-Maximization Clustering for wine-Q-FA
+Training Data Metrics -EM-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.09206 0.07727 0.08402 0.04211 0.08075 0.07443
+Validation Data Metrics -EM-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.07743 0.06228 0.06904 0.02939 0.06481 0.04162
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0]
+[0 1 0 6 1 0 0 0 0]
+[ 0 10  3 35  8 14  0  0  0]
+[  4  66 123  99 137 143   0   0   0]
+[  2 277 108  73 195 256   0   0   0]
+[  1 168  17  10  38 116   0   0   0]
+[ 0 31  0  0  5 13  0  0  0]
+
+
+Neural Networks
+Neural Networks - Classification ReportFA
+
+
+Train Data Prediction Accuracy FA %: 55.003403675970056
+Test Data Validation Accuracy FA %: 47.755102040816325
+Test Data Confusion Matrix FA : 
+[0 0 2 6 0 0]
+[ 0  5 38 23  4  0]
+[  0   6 262 293  11   0]
+[  0   1 229 600  81   0]
+[  0   1  41 239  69   0]
+[ 0  0  1 33 15  0]
+Plot ./result/wine-Q/\80-wine-Q-FA-LearningCurve.png Created
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.38      0.07      0.12        70
+           5       0.46      0.46      0.46       572
+           6       0.50      0.66      0.57       911
+           7       0.38      0.20      0.26       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.48      1960
+   macro avg       0.29      0.23      0.23      1960
+weighted avg       0.45      0.48      0.45      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0758615732966117
+number of iterations the solver: 661
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 53.471749489448605
+Test Data Validation Accuracy FA %: 48.41836734693877
+Test Data Confusion Matrix FA : 
+[0 0 3 5 0 0]
+[ 0  0 44 24  2  0]
+[  0   0 248 315   9   0]
+[  0   0 201 635  75   0]
+[  0   0  39 245  66   0]
+[ 0  0  1 31 17  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.46      0.43      0.45       572
+           6       0.51      0.70      0.59       911
+           7       0.39      0.19      0.25       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.48      1960
+   macro avg       0.23      0.22      0.21      1960
+weighted avg       0.44      0.48      0.45      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.1082562694272102
+number of iterations the solver: 488
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 54.356705241661
+Test Data Validation Accuracy FA %: 46.88775510204082
+Test Data Confusion Matrix FA : 
+[0 0 2 5 1 0]
+[ 0  0 45 20  5  0]
+[  0   0 262 293  17   0]
+[  0   0 229 590  92   0]
+[  0   0  39 244  67   0]
+[ 0  0  2 24 23  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00        70
+           5       0.45      0.46      0.46       572
+           6       0.50      0.65      0.57       911
+           7       0.33      0.19      0.24       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.47      1960
+   macro avg       0.21      0.22      0.21      1960
+weighted avg       0.42      0.47      0.44      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0806117229414995
+number of iterations the solver: 774
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 54.59496255956433
+Test Data Validation Accuracy FA %: 48.62244897959184
+Test Data Confusion Matrix FA : 
+[0 0 3 5 0 0]
+[ 0  8 32 28  2  0]
+[  0   8 263 290  11   0]
+[  0   3 214 617  77   0]
+[  0   1  36 248  65   0]
+[ 0  0  1 32 16  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.40      0.11      0.18        70
+           5       0.48      0.46      0.47       572
+           6       0.51      0.68      0.58       911
+           7       0.38      0.19      0.25       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.49      1960
+   macro avg       0.29      0.24      0.25      1960
+weighted avg       0.46      0.49      0.46      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0696260491965763
+number of iterations the solver: 669
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 53.23349217154527
+Test Data Validation Accuracy FA %: 46.785714285714285
+Test Data Confusion Matrix FA : 
+[0 0 3 5 0 0]
+[ 0  3 37 28  2  0]
+[  0   2 234 324  12   0]
+[  0   0 226 610  75   0]
+[  0   0  39 241  70   0]
+[ 0  0  1 28 20  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.60      0.04      0.08        70
+           5       0.43      0.41      0.42       572
+           6       0.49      0.67      0.57       911
+           7       0.39      0.20      0.26       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.47      1960
+   macro avg       0.32      0.22      0.22      1960
+weighted avg       0.45      0.47      0.44      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0920906868246132
+number of iterations the solver: 506
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 54.83321987746766
+Test Data Validation Accuracy FA %: 47.29591836734694
+Test Data Confusion Matrix FA : 
+[0 1 2 5 0 0]
+[ 0  8 40 19  3  0]
+[  0   6 274 280  12   0]
+[  0   1 245 572  93   0]
+[  0   0  42 235  73   0]
+[ 0  0  1 30 18  0]
+Classification report: ((HiddenLayer),episode) = ((10, 20), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.50      0.11      0.19        70
+           5       0.45      0.48      0.47       572
+           6       0.50      0.63      0.56       911
+           7       0.37      0.21      0.27       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.47      1960
+   macro avg       0.30      0.24      0.25      1960
+weighted avg       0.45      0.47      0.45      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0743532568842338
+number of iterations the solver: 508
+num of layers: 4
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 53.437712729748135
+Test Data Validation Accuracy FA %: 48.01020408163265
+Test Data Confusion Matrix FA : 
+[0 0 3 5 0 0]
+[ 0  1 41 26  2  0]
+[  0   0 253 313   6   0]
+[  0   0 216 607  88   0]
+[  0   0  34 236  80   0]
+[ 0  0  1 31 17  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       1.00      0.01      0.03        70
+           5       0.46      0.44      0.45       572
+           6       0.50      0.67      0.57       911
+           7       0.41      0.23      0.29       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.48      1960
+   macro avg       0.40      0.23      0.22      1960
+weighted avg       0.48      0.48      0.45      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0842889377787832
+number of iterations the solver: 530
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 55.27569775357386
+Test Data Validation Accuracy FA %: 46.224489795918366
+Test Data Confusion Matrix FA : 
+[0 0 3 4 1 0]
+[ 0  8 33 26  3  0]
+[  0   6 254 296  16   0]
+[  0   2 239 567 103   0]
+[  0   1  40 232  77   0]
+[ 0  0  1 32 16  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 1500)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.47      0.11      0.18        70
+           5       0.45      0.44      0.44       572
+           6       0.49      0.62      0.55       911
+           7       0.36      0.22      0.27       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.46      1960
+   macro avg       0.29      0.23      0.24      1960
+weighted avg       0.44      0.46      0.44      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0507878404915099
+number of iterations the solver: 962
+num of layers: 5
+Num of o/p: 7
+
+
+Train Data Prediction Accuracy FA %: 54.39074200136147
+Test Data Validation Accuracy FA %: 48.16326530612245
+Test Data Confusion Matrix FA : 
+[0 0 2 5 1 0]
+[ 0  6 34 27  3  0]
+[  0   3 253 306  10   0]
+[  0   2 221 608  80   0]
+[  0   1  38 234  77   0]
+[ 0  0  1 29 19  0]
+Classification report: ((HiddenLayer),episode) = ((10, 10, 10), 2000)
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         8
+           4       0.50      0.09      0.15        70
+           5       0.46      0.44      0.45       572
+           6       0.50      0.67      0.57       911
+           7       0.41      0.22      0.29       350
+           8       0.00      0.00      0.00        49
+
+    accuracy                           0.48      1960
+   macro avg       0.31      0.24      0.24      1960
+weighted avg       0.46      0.48      0.45      1960
+
+Attributes of the Learned Classifier
+current loss computed with the loss function: 1.0673955707465184
+number of iterations the solver: 806
+num of layers: 5
+Num of o/p: 7
+Plot ./result/wine-Q/82-FA-Episodes [(1000,1500,2000)]-HiddenLayers[(10,10),(10,20),(10, 10, 10)]-tuning.png Created
+[0 0 2 6 0 0]
+[ 0  5 38 23  4  0]
+[  0   6 262 293  11   0]
+[  0   1 229 600  81   0]
+[  0   1  41 239  69   0]
+[ 0  0  1 33 15  0]
+[0 0 3 5 0 0]
+[ 0  0 44 24  2  0]
+[  0   0 248 315   9   0]
+[  0   0 201 635  75   0]
+[  0   0  39 245  66   0]
+[ 0  0  1 31 17  0]
+[0 0 2 5 1 0]
+[ 0  0 45 20  5  0]
+[  0   0 262 293  17   0]
+[  0   0 229 590  92   0]
+[  0   0  39 244  67   0]
+[ 0  0  2 24 23  0]
+[0 0 3 5 0 0]
+[ 0  8 32 28  2  0]
+[  0   8 263 290  11   0]
+[  0   3 214 617  77   0]
+[  0   1  36 248  65   0]
+[ 0  0  1 32 16  0]
+[0 0 3 5 0 0]
+[ 0  3 37 28  2  0]
+[  0   2 234 324  12   0]
+[  0   0 226 610  75   0]
+[  0   0  39 241  70   0]
+[ 0  0  1 28 20  0]
+[0 1 2 5 0 0]
+[ 0  8 40 19  3  0]
+[  0   6 274 280  12   0]
+[  0   1 245 572  93   0]
+[  0   0  42 235  73   0]
+[ 0  0  1 30 18  0]
+[0 0 3 5 0 0]
+[ 0  1 41 26  2  0]
+[  0   0 253 313   6   0]
+[  0   0 216 607  88   0]
+[  0   0  34 236  80   0]
+[ 0  0  1 31 17  0]
+[0 0 3 4 1 0]
+[ 0  8 33 26  3  0]
+[  0   6 254 296  16   0]
+[  0   2 239 567 103   0]
+[  0   1  40 232  77   0]
+[ 0  0  1 32 16  0]
+[0 0 2 5 1 0]
+[ 0  6 34 27  3  0]
+[  0   3 253 306  10   0]
+[  0   2 221 608  80   0]
+[  0   1  38 234  77   0]
+[ 0  0  1 29 19  0]
+best n_components by PCA CV = 10
+best n_components by FactorAnalysis CV = 8
+
+
+Results for Data set =d i g i t s
+
+
+K-means Clustering for digits-
+Training Data Metrics -kmeans-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.60412 0.68899 0.64377 0.50153 0.63805 0.12469
+Validation Data Metrics -kmeans-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.60041 0.69870 0.64584 0.47337 0.63816 0.13204
+[ 1  0 70  0  0  0  0  0  0  0]
+[56  3  0  1  0 13  0  0  0  0]
+[11  2  0  1  0 20  0  0  0 39]
+[ 2 64  0  4  0  0  0  0  0  2]
+[ 1  0  0  5 68  0  0  0  0  0]
+[ 2 27  0  4  0  0  0  1  0 26]
+[ 3  0  0  0  0  0  0 67  0  0]
+[ 0  0  0 66  1  0  0  0  0  3]
+[39 30  0  3  0  0  0  0  0 12]
+[ 2 59  0 10  0  0  0  0  0  1]
+
+
+Expectation-Maximization Clustering for digits-
+Training Data Metrics -EM-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.60495 0.67236 0.63687 0.42050 0.63028 0.10603
+Validation Data Metrics -EM-:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.53323 0.67578 0.59610 0.33008 0.58510 0.07078
+[ 0  0  4  0  0  0  0  0 67  0]
+[ 0  0 59  0  1 13  0  0  0  0]
+[ 0  0 22 21  0 30  0  0  0  0]
+[ 1 17 47  5  2  0  0  0  0  0]
+[63  0  3  0  7  0  0  0  0  1]
+[ 0 11 34 10  2  0  0  3  0  0]
+[ 0  0  2  0  0  0 68  0  0  0]
+[ 0  0  1  0 69  0  0  0  0  0]
+[ 0  3 75  4  1  1  0  0  0  0]
+[ 0 13 54  0  4  0  1  0  0  0]
+
+
+K-means Clustering for digits-PCA
+Training Data Metrics -kmeans-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.78818 0.67310 0.72611 0.63649 0.71711 0.21991
+Validation Data Metrics -kmeans-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.43763 0.40210 0.41911 0.23154 0.39641 0.01097
+[ 0  0 20  3  0  0  0  0  0  0  1  0  0 47  0  0  0]
+[ 0  6  6  0  8  0  0  0  0  0  0  3 39  1  0  0 10]
+[ 5  3  0  0 35  0  0  4  0  0  1  0  9  0 16  0  0]
+[ 6  3 12  0 21  6  0 15  0  0  0  2  2  0  2  0  3]
+[ 3  0  0 36  0  0  0  0  0  0 23  2  3  6  0  0  1]
+[ 6  6  2  5  0  0  0 10  0  0  1  0  0  0 12 16  2]
+[ 0  0  0  0  0  0  0  0  0  0 23  0 21 26  0  0  0]
+[ 3 22  0 12  0  0  0  9  0  0  0  1  0  0  0  0 23]
+[28 13  1  0  4  0  1  1  0  0  3  5 18  1  2  4  3]
+[30  1 26  2  1  0  0  2  0  0  0  0  0  0  2  0  8]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+
+Expectation-Maximization Clustering for digits-PCA
+Training Data Metrics -EM-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.75930 0.65558 0.70364 0.59487 0.69402 0.21170
+Validation Data Metrics -EM-PCA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.07960 0.12344 0.09679 0.03107 0.07299 -0.17146
+[ 2  0  0  0  0  0  0  0  0  0  0 57 10  2  0  0]
+[26  0  0  0  0  0  0  0  0  0 10  8 12 15  0  2]
+[18  0  0  2  0  0  0  0  0  0 10 25  9  5  4  0]
+[18  0  0  1  0  0  0  0  1  0  2 36  3 11  0  0]
+[19  0  0  0  0  0  0  0  0  0  8 34  9  4  0  0]
+[ 7  0  0  0  0  0  0  0  0  0  2 43  1  6  1  0]
+[15  0  0  0  0  0  0  0  0  0  0 52  2  1  0  0]
+[20  0  0  1  0  0  0  0  0  0  6 17 17  5  4  0]
+[17  0  0  5  0  0  0  0  0  0  4 28 23  6  1  0]
+[22  0  0  0  0  0  0  0  0  0  1 32  9  8  0  0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+ICA Kurtosis :8.621006127754892
+
+
+K-means Clustering for digits-ICA
+Training Data Metrics -kmeans-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.74186 0.63432 0.68389 0.59363 0.67372 0.18225
+Validation Data Metrics -kmeans-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.26715 0.24461 0.25538 0.10047 0.22668 -0.01672
+[ 0  0  0  0  0  0 23  0  0  0 11 25  0  0  0 12  0]
+[ 0  0 17 11  0  0  1  0  9  8  8  0  0  0  7 10  2]
+[ 5  8  6  4  0  0  1  0  6  6  1 13  0  0 17  5  1]
+[30  7  6  3  0  0  7  0  8  0  2  0  0  0  8  1  0]
+[ 0 10 12  8  0  2  4  0  0  0  3  5  0  2  7 13  8]
+[ 0  1  3 16  0  2  6  0  6  0  7  4  0  0 11  1  3]
+[ 0  0  7  8  0  0 20  0  8  5  3  0  0  0  0  2 17]
+[ 0 20  0  0  0 14  0  0  0  0  8 13  0  0  0  0 15]
+[ 0  2 26 25  0  0  1  0 11  0  6  7  0  0  3  2  1]
+[ 0 10  5 14  0  2 13  0  0  0  1  0  2  0 10  5 10]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+
+Expectation-Maximization Clustering for digits-ICA
+Training Data Metrics -EM-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.76379 0.67493 0.71662 0.61197 0.70728 0.17104
+Validation Data Metrics -EM-ICA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.19177 0.21122 0.20103 0.09531 0.16923 -0.11522
+[ 2  4  0 18  0  7  0  0  0  0 16  2  3  1  8 10]
+[ 0  0  2 19  6  0  1  0  0  0 32  1  4  2  2  4]
+[ 0 12  1 18  1  0  0  0  0  0 24  3  2  4  1  7]
+[ 0 10  4  6  1  1  0  0  0  0 26  4 18  0  0  2]
+[ 0  2  1 22  0  0  0  0  0  2  9 37  1  0  0  0]
+[ 0  1  0 10  0  0  0  0  0  0  2  2  3  0  0 42]
+[ 0  3  0 10  0  1  0  0  0  0  4  0 10  0  1 41]
+[ 0  2  2  3  7  3  0  0  0  0 17 29  1  1  1  4]
+[ 0 14  1  7  5  0  2  0  0  0 17  9 18  0  1 10]
+[ 0 11  2 15  1  0  0  0  0  0 14  3 21  1  0  4]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+RP Kurtosis :-0.17783249146291658
+
+
+K-means Clustering for digits-RP
+Training Data Metrics -kmeans-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.64128 0.55869 0.59714 0.48651 0.58399 0.17218
+Validation Data Metrics -kmeans-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.31103 0.34192 0.32575 0.17603 0.30103 0.04119
+[53  0  3  1  0  0  0  2 12  0  0  0  0  0]
+[ 0  0  0  1 53  2  0 17  0  0  0  0  0  0]
+[ 0  7  1  0 34 24  0  0  7  0  0  0  0  0]
+[ 0  8  0  0  6 41  0 10  3  0  0  2  0  2]
+[21  0 13  4  5  1  0 22  0  1  3  3  0  1]
+[ 0 17  0  0  2 14  0 10 13  0  1  0  2  1]
+[ 2 11  0  0  3  1  0  8 45  0  0  0  0  0]
+[ 0  0 12  1 31  3  0  7  0  0  0 11  0  5]
+[ 4  8  3  0 29 13  0 23  1  2  0  0  0  1]
+[ 1 13  0  0  6 18  0 18  1  0  2 13  0  0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+
+Expectation-Maximization Clustering for digits-RP
+Training Data Metrics -EM-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.67007 0.57078 0.61645 0.46907 0.60389 0.13535
+Validation Data Metrics -EM-RP:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.10300 0.12095 0.11125 0.04219 0.07999 -0.14625
+[ 0 18  0  3 34  4  0  0  0  0  4  5  1  2  0]
+[ 0 15  0  8  7  1  0  0  0  0  1  3  6 32  0]
+[ 0 13  0  0 17 13  0  0  0  0  0  4  6 20  0]
+[ 0  5  0  4 15 25  0  0  0  0  1 12  5  5  0]
+[ 1 37  0  0  7  7  0  1  0  0  3  6  4  8  0]
+[ 0 16  0  1 26  2  2  2  1  0  2  4  4  0  0]
+[ 0 10  0  3 31 14  0  0  3  0  0  4  0  5  0]
+[ 0 13  0  0 16  7  0  0  0  0  3 10 11  9  1]
+[ 1 19  0  1 19 18  0  0  0  0  2  7  5 12  0]
+[ 0  8  0  6 19  8  0  2  1  0  2  2 16  8  0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+
+K-means Clustering for digits-FA
+Training Data Metrics -kmeans-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.76566 0.63352 0.69335 0.56298 0.68318 0.17112
+Validation Data Metrics -kmeans-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.36839 0.32307 0.34424 0.18853 0.31390 -0.00520
+[ 3  0  0 32 10  0  6 15  0  0  0  0  5  0  0  0  0  0]
+[11  3  5  0  0  3  0  0 13  1  3  0  2  0 14  0 17  1]
+[ 1 23  5  0  0  0  5  2 12  2  4  0  2  1  9  4  3  0]
+[ 2  9  8  0  0 42  1  0  0  0  0  0  1  0  4  0  5  0]
+[ 3  0  1  2 48  4  2  0  3  0  3  0  2  0  1  5  0  0]
+[ 0  8  0  0  6 14  0  0  0  0  6  0  0  0 17  0  9  0]
+[ 0  0  0  0  1  4 27  2  1  0  9  0  1  0  1  5  1 18]
+[35  0  2  2  9  6  0  0  0  1  0  0  0  0  6  0  9  0]
+[ 7  0 14  1  3  5  0  1  4  0  9  2  6  0 24  0  2  6]
+[12  3  8  9  0 27  1  3  2  0  1  0  2  0  1  2  0  1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+
+
+Expectation-Maximization Clustering for digits-FA
+Training Data Metrics -EM-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.82954 0.67225 0.74266 0.61343 0.73417 0.15665
+Validation Data Metrics -EM-FA:
+homo    compl   v-meas  ARI     AMI     silhouette
+0.08962 0.17357 0.11821 0.03916 0.09269 -0.13382
+[49  0  0  0  0 10  0  4  1  0  1  0  0  6]
+[10  1  0  0  0 55  0  0  4  0  0  0  0  3]
+[ 6  1  0  0  0 39  0  5 20  0  0  0  1  1]
+[11  0  0  0  0 50  0  6  4  0  0  0  0  1]
+[13  0  0  0  0 56  0  3  0  0  0  0  0  2]
+[21  1  0  0  0 22  0  7  7  0  0  0  1  1]
+[ 7  0  0  0  0 63  0  0  0  0  0  0  0  0]
+[11  0  0  0  0 58  0  0  0  0  0  1  0  0]
+[23  2  0  0  0 41  0  2  7  0  0  2  2  5]
+[31  0  0  0  0 27  0  8  4  0  0  0  1  1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+best n_components by PCA CV = 12
+best n_components by FactorAnalysis CV = 44
+
+
+
+Start Time = 1617568878.048986
+End Time = 1617569538.080493
+Execution Time = 660.0315070152283
+
+
+
+Done

@@ -1,4 +1,4 @@
-Project3 - Clustering and Dimensionality Reduction
+Project3 - Unsupervised Learning and Dimensionality Reduction
 Bommegowda P. Somashekharagowda
 GTID: 903387896 
 CS7641
@@ -6,11 +6,13 @@ Spring-2021
 
 1) Code github Repo link -
 code github link:
-	https://github.gatech.edu/bps6/CS7641-Project3
-	https://github.com/bpsom/CS7641-Project3
+	Link 1: https://github.gatech.edu/bps6/CS7641-Project3
+	Link 2: https://github.com/bpsom/CS7641-Project3
 	The repo consists of all source files to execute the project, datasets
-	github (gatech) last commit id: ab34e0750689ead6490b29b2f939f18852e54ce4
-	Note that after this commit only Reame.txt file was modified to include this commit information.
+	github (gatech) last commit id: 4e46db9cec1112e6382f64bfae1f0db8f917594b
+	Note:
+	(1) After this commit only Reame.txt file was modified to include this commit information.
+	(2) 2 links are provided for source access. It was observed gatech github asks for login to give access to the repository. To get the source without login use Link 2
 
 2) File Details
 	The code has below source files -
